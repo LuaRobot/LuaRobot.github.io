@@ -1,0 +1,91 @@
+:root{
+  --bg:#fbf8f3;
+  --card:#ffffff;
+  --ink:#2d2a26;
+  --muted:#857b71;
+  --line:#eae3d9;
+  --accent:#d98a6a;
+  --code-bg:#f4efe8;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{
+  margin:0;background:var(--bg);color:var(--ink);
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans CJK SC","Source Han Sans SC","Microsoft YaHei",sans-serif;
+  font-size:16px;line-height:1.8;-webkit-font-smoothing:antialiased;
+}
+a{color:inherit;text-decoration:none}
+.inner{max-width:720px;margin:0 auto;padding:0 22px}
+
+/* header */
+.site-head{border-bottom:1px solid var(--line);background:rgba(251,248,243,.92);position:sticky;top:0;backdrop-filter:blur(6px);z-index:9}
+.site-head .inner{display:flex;align-items:center;justify-content:space-between;height:62px}
+.brand{display:flex;align-items:center;gap:10px;font-size:16px}
+.brand img{border-radius:50%;display:block}
+.site-head nav{display:flex;gap:20px;font-size:14px;color:var(--muted)}
+.site-head nav a:hover{color:var(--accent)}
+
+.wrap{max-width:720px;margin:0 auto;padding:44px 22px 70px;min-height:60vh}
+
+/* cards */
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:22px 24px;margin-bottom:16px;transition:box-shadow .18s,transform .18s}
+.card:hover{box-shadow:0 8px 24px rgba(120,100,80,.08);transform:translateY(-1px)}
+.card h2{margin:0 0 6px;font-size:20px;line-height:1.45}
+.card h2 a:hover{color:var(--accent)}
+.meta{color:var(--muted);font-size:13px;margin:0 0 12px;display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.meta a.tag{border:1px solid var(--line);border-radius:999px;padding:1px 9px;font-size:12px;color:var(--muted)}
+.meta a.tag:hover{color:var(--accent);border-color:var(--accent)}
+.excerpt{color:#4a4540;font-size:15px}
+.more{margin:10px 0 0;font-size:14px}
+.more a{color:var(--accent)}
+
+/* post */
+.post h1{font-size:28px;line-height:1.45;margin:0 0 8px}
+.post .content{margin-top:26px}
+.content p{margin:0 0 18px}
+.content h2{font-size:21px;margin:34px 0 12px;padding-bottom:6px;border-bottom:1px solid var(--line)}
+.content h3{font-size:17px;margin:26px 0 10px}
+.content ul,.content ol{padding-left:22px;margin:0 0 18px}
+.content li{margin:4px 0}
+.content blockquote{margin:0 0 18px;padding:2px 18px;border-left:3px solid var(--accent);color:#5a534c;background:#fdfaf6}
+.content code{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,"Noto Sans Mono CJK SC",monospace;font-size:13.5px;background:var(--code-bg);padding:1px 5px;border-radius:4px}
+.content pre{background:var(--code-bg);border:1px solid var(--line);border-radius:10px;padding:14px 16px;overflow-x:auto;line-height:1.6;margin:0 0 20px}
+.content pre code{background:none;padding:0;font-size:13px}
+.content img{max-width:100%;height:auto;border-radius:10px}
+.content table{border-collapse:collapse;width:100%;font-size:14px;margin:0 0 20px}
+.content th,.content td{border:1px solid var(--line);padding:7px 10px;text-align:left}
+.content th{background:#faf6f0}
+.content hr{border:none;border-top:1px solid var(--line);margin:30px 0}
+
+.post-nav{display:flex;justify-content:space-between;gap:14px;margin-top:44px;padding-top:18px;border-top:1px solid var(--line);font-size:14px;color:var(--muted)}
+.post-nav a:hover{color:var(--accent)}
+.post-nav .right{margin-left:auto;text-align:right}
+
+/* archive */
+.page-title{font-size:24px;margin:0 0 26px}
+h2.year{font-size:14px;letter-spacing:1.5px;color:var(--muted);font-weight:600;margin:30px 0 8px}
+ul.arch{list-style:none;margin:0;padding:0}
+ul.arch li{display:flex;gap:14px;padding:6px 0;border-bottom:1px dashed var(--line);font-size:15px}
+ul.arch li .d{color:var(--muted);font-size:13px;flex:none;width:52px;font-variant-numeric:tabular-nums}
+ul.arch li a:hover{color:var(--accent)}
+
+/* pager */
+.pager{display:flex;justify-content:space-between;align-items:center;font-size:14px;color:var(--muted);margin-top:26px}
+.pager a:hover{color:var(--accent)}
+
+.muted{color:var(--muted)}
+.empty{color:var(--muted)}
+
+/* footer */
+.site-foot{border-top:1px solid var(--line);padding:26px 0 40px;font-size:13.5px;color:#5a534c}
+.site-foot .inner p{margin:4px 0}
+.site-foot a:hover{color:var(--accent)}
+
+@media (max-width:520px){
+  .wrap{padding:28px 18px 50px}
+  .site-head .inner{height:56px}
+  .site-head nav{gap:14px;font-size:13px}
+  .card{padding:18px}
+  .post h1{font-size:23px}
+  .post-nav{flex-direction:column;gap:8px}
+}
